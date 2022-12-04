@@ -33,8 +33,8 @@ const About = () => {
             sermons, Sda hymns, Sda mix, accapella ,Sda nonstops, praise and
             worship,events, articles, gospel artists and much more. It also
             updates users with the latest resources on how to live better in
-            Christ.
-            It also promotes gospel music artist and choir from all regions
+            Christ. It also promotes gospel music artists and choirs from all
+            regions
           </p>
           <p className=" p-2 text-xl  mb-4">
             Uquicks is the number one free gospel streaming and downloading
