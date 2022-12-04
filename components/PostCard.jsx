@@ -17,7 +17,7 @@ const PostCard = ({ post }) => (
     <h1 className="transition duration-700 text-center mb-2 cursor-pointer hover:text-pink-600 text-xl font-semibold">
       <Link href={`/post/${post.slug}`}>{post.title}</Link>
     </h1>
-    <div className="flex gap-6  items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="font-medium text-gray-700">
         <svg
           xmlns="http://www.w3.org/2000/svg"

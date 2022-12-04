@@ -162,7 +162,7 @@ const PostDetail = ({ post }) => {
         </div>
       </div>
 
-      <div className="mt-10 flex items-center flex-col bg-white shadow-2xl py-3 px-28 justify-center rounded-lg">
+      <div className="mt-4 flex items-center flex-col bg-white shadow-2xl py-3 px-2 lg:px-28 justify-center rounded-lg">
         <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-500 text-lg font-medium rounded-full text-white px-8 py-3 my-6 cursor-pointer">
           Lyrics
         </span>

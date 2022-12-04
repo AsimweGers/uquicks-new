@@ -88,7 +88,7 @@ export default function Home({ posts }) {
         />
         <link
           rel="icon"
-          href="https://www.kindpng.com/picc/m/223-2231002_entertainment-png-v-music-entertainment-logo-png-transparent.png"
+          href="/uquickslogo.png"
         />
         <meta
           property="og:description"
@@ -105,7 +105,7 @@ export default function Home({ posts }) {
         <meta charset="utf-8" />
         <meta name="theme-color" content="#000000" />
       </head>
-      <div className="container mb-4 md:px-2">
+      <div className="container mb-4">
         <FeaturedPosts />
         <div className="grid lg:grid-cols-12 gap-4">
           <div className="lg:col-span-8 justify-center flex flex-wrap">
