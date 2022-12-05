@@ -20,6 +20,8 @@ const PostDetails = ({ post }) => {
     return <Loader />;
   }
 
+
+  
   return (
     <>
       <div className="container px-4 mb-8">

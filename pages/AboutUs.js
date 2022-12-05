@@ -1,27 +1,56 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const About = () => {
+  const SEO = {
+    title: "About Us | Uquicks",
+    description:
+      "Uquicks is a gospel based music website that gives you all the gospel music and much more across the world",
+    additionalMetaTags: [
+      {
+        keywords:
+          "Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      },
+    ],
+
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU",
+      },
+    ],
+
+    openGraph: {
+      title: "About Us | Uquicks",
+      description:
+        "Uquicks is a gospel based music website that gives you all the gospel music and much more across the world",
+      keywords:
+        "Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      images: [
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU",
+          width: 800,
+          height: 600,
+          alt: "Og Image Alt",
+          type: "image/png",
+        },
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU",
+          width: 900,
+          height: 800,
+          alt: "Og Image Alt Second",
+          type: "image/png",
+        },
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU",
+        },
+      ],
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>About Us | Uquicks</title>
-        <meta
-          name="keywords"
-          content="Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,"
-        />
-        <meta
-          name="og:description"
-          content="Uquicks is a gospel based music website that gives you all the gospel music and much more across the world"
-        />
-        <meta property="og:title" content="About Us | Uquicks" />
-        <link
-          rel="icon"
-          href="/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU"
-        />
-      </Head>
+      <NextSeo {...SEO} />
       <div className="transition duration-500 ease transform hover:-translate-y-1 px-2 mt-4 items-center flex flex-col">
         <div className="text-center mb-4 text-3xl justify-center transition duration-500 ease transform hover:-translate-y-1 inline-block items-center lg:items-center bg-gray-400 rounded-full px-4 py-3">
           <h1> About Uquicks </h1>

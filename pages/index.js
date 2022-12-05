@@ -79,32 +79,6 @@ export default function Home({ posts }) {
   };
 
   return (
-    <div>
-      <head>
-        <title>Uquicks | The Home of Gospel | Resources | Events</title>
-        <meta
-          property="og:title"
-          content="Uquicks | The Home of Gospel | Resources | Events"
-        />
-        <link
-          rel="icon"
-          href="/uquickslogo.png"
-        />
-        <meta
-          property="og:description"
-          content="Uquicks is fully equipped gospel based website with the all kinds of
-            gospel music across the world."
-        />
-
-        <meta
-          name="keywords"
-          content="sda music, sda nonstops, hymn songs, sda hymns, sda mix"
-        />
-
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <meta charset="utf-8" />
-        <meta name="theme-color" content="#000000" />
-      </head>
       <div className="container mb-4">
         <FeaturedPosts />
         <div className="grid lg:grid-cols-12 gap-4">
@@ -129,7 +103,6 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

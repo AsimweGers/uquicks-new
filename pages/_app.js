@@ -5,6 +5,8 @@ import ScrollToTopButton from "../components/ScrollToTop";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config"
 
 export default function MyApp({ Component, pageProps }) {
   
@@ -18,20 +20,6 @@ export default function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
-  
-  const [showChild, setShowChild] = useState(false);
-  useEffect(() => {
-    setShowChild(true);
-  }, []);
-
-  if (!showChild) {
-    return null;
-  }
-
-  if (typeof window === "undefined") {
-    return <></>;
-  } else {
     
     return (
       <>
@@ -53,14 +41,13 @@ export default function MyApp({ Component, pageProps }) {
           `,
           }}
         />
+        <DefaultSeo {...SEO} />
         <ScrollToTopButton />
-
         <Layout>
           <Component {...pageProps} />
         </Layout>
       </>
     );
   }
-}
 
 
