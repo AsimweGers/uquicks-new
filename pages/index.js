@@ -79,6 +79,45 @@ export default function Home({ posts }) {
   };
 
   return (
+    <div>
+      <head>
+        <title>Uquicks | The Home of Gospel | Resources | Events</title>
+        <link rel="icon" href="/uquickslogo.png" />
+        <meta
+          name="description"
+          content="Uquicks is fully equipped gospel based website with the all kinds of
+            gospel music across the world."
+        />
+        <meta
+          name="keywords"
+          content="Watch, Download Ntume Ani by Golden Gate Choir Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here ,sda music, sda nonstops, hymn songs, sda hymns, sda mix"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Uquicks" />
+        <meta name="twitter:creator" content="@bwambale_joshua" />
+        <meta property="og:url" content="https://www.uquicks.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_IE" />
+        <meta property="og:site_name" content="Uquicks" />
+        <meta property="og:image:alt" content="Uquicks" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta
+          property="og:title"
+          content="Uquicks | The Home of Gospel | Resources | Events"
+        />
+        <meta
+          property="og:description"
+          content="Uquicks is fully equipped gospel based website with the all kinds of
+            gospel music across the world."
+        />
+        <meta
+          property="og:image"
+          content="https://media.graphassets.com/7qzxYWtrTh2cbLhCXnhS"
+        />
+      </head>
       <div className="container mb-4">
         <FeaturedPosts />
         <div className="grid lg:grid-cols-12 gap-4">
@@ -103,6 +142,7 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+    </div>
   );
 }
 

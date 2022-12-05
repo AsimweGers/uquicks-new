@@ -1,6 +1,8 @@
 import React from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { grpahCMSImageLoader } from "../util";
 import ReactPlayer from "react-player";
-import { NextSeo } from "next-seo";
 // import AdBanner from "./AdBanner";
 
 const PostDetail = ({ post }) => {
@@ -61,44 +63,32 @@ const PostDetail = ({ post }) => {
     }
   };
 
-  const SEO = {
-    title: post.title,
-    description: `Watch & Download ${post.title} Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`,
-    additionalMetaTags: [
-      {
-        keywords: `Watch & Download ${post.title} Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here ,sda music, sda nonstops, hymn songs, sda hymns, sda mix`,
-      },
-    ],
-
-    additionalLinkTags: [{ rel: "icon", href: post.featuredImage.url }],
-
-    openGraph: {
-      title: post.title,
-      description: `Watch & Download ${post.title} Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`,
-      keywords: `Watch & Download ${post.title} Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here ,sda music, sda nonstops, hymn songs, sda hymns, sda mix`,
-      images: [
-        {
-          url: post.featuredImage.url,
-          width: 800,
-          height: 600,
-          alt: "Og Image Alt",
-          type: "image/png",
-        },
-        {
-          url: post.featuredImage.url,
-          width: 900,
-          height: 800,
-          alt: "Og Image Alt Second",
-          type: "image/png",
-        },
-        { url: post.featuredImage.url },
-      ],
-    },
-  };
-
   return (
-    <>
-      <NextSeo {...SEO} />
+    <div className="container">
+      <head>
+        <title>{post.title}</title>
+        <link rel="icon" href={`${post.featuredImage.url}`} />
+        <meta
+          name="description"
+          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
+        />
+        <meta
+          name="keywords"
+          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
+        />
+        <meta name="robots" content="index,follow" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Uquicks" />
+        <meta name="twitter:creator" content="@bwambale_joshua" />
+        <meta property="og:image:width" content="800" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:title" content={post.title} />
+        <meta
+          property="og:description"
+          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
+        />
+        <meta property="og:image" content={`${post.featuredImage.url}`} />
+      </head>
       <div className="bg-white shadow-lg rounded-lg mt-6 p-3">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
@@ -144,6 +134,19 @@ const PostDetail = ({ post }) => {
                     src={`https://loader.to/api/button/?url=https://www.youtube.com/watch?v=${post.downloadable}&=mp3&color=008744#`}
                   ></iframe>
                 </div>
+
+                {/* 
+                <iframe
+                  className=" font-medium justify-center "
+                  src={`https://ytmp4.buzz/api/button/videos/${post.downloadable}`}
+                  width="100%"
+                  allowtransparency="true"
+                  scrolling="no"
+                  style={{
+                    border: "none",
+                    height: "auto",
+                  }}
+                ></iframe> */}
               </div>
               <div className="mt-4">
                 <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-red-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
@@ -185,7 +188,7 @@ const PostDetail = ({ post }) => {
       {/* <div>
         <AdBanner />
       </div> */}
-    </>
+    </div>
   );
 };
 

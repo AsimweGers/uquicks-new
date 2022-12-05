@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 import Head from "next/head";
-import { NextSeo } from "next-seo";
 
 const ContactUs = (props) => {
   function sendEmail(e) {
