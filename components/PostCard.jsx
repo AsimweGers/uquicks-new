@@ -5,7 +5,7 @@ import TimeAgo from "react-timeago";
 import { grpahCMSImageLoader } from "../util";
 
 const PostCard = ({ post }) => (
-  <div className="bg-white shadow-lg w-72 border-2 hover:shadow-2xl m-4">
+  <div className="bg-white shadow-lg border-2 hover:shadow-2xl">
     <div className="relative overflow-hidden shadow-md pb-60 mb-6">
       <img
         src={post.featuredImage.url}

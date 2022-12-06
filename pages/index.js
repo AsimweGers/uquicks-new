@@ -82,7 +82,7 @@ export default function Home({ posts }) {
     <div>
       <head>
         <title>Uquicks | The Home of Gospel | Resources | Events</title>
-        <link rel="icon" href="/uquickslogo.png" />
+        <link rel="icon" href="/uquicks.png"/>
         <meta
           name="description"
           content="Uquicks is fully equipped gospel based website with the all kinds of
@@ -92,18 +92,6 @@ export default function Home({ posts }) {
           name="keywords"
           content="Watch, Download Ntume Ani by Golden Gate Choir Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here ,sda music, sda nonstops, hymn songs, sda hymns, sda mix"
         />
-        <meta name="robots" content="index,follow" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Uquicks" />
-        <meta name="twitter:creator" content="@bwambale_joshua" />
-        <meta property="og:url" content="https://www.uquicks.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_IE" />
-        <meta property="og:site_name" content="Uquicks" />
-        <meta property="og:image:alt" content="Uquicks" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
         <meta
           property="og:title"
           content="Uquicks | The Home of Gospel | Resources | Events"
@@ -113,28 +101,44 @@ export default function Home({ posts }) {
           content="Uquicks is fully equipped gospel based website with the all kinds of
             gospel music across the world."
         />
-        <meta
-          property="og:image"
-          content="https://media.graphassets.com/7qzxYWtrTh2cbLhCXnhS"
-        />
       </head>
-      <div className="container mb-4">
+      <div className="justify-center">
         <FeaturedPosts />
-        <div className="grid lg:grid-cols-12 gap-4">
-          <div className="lg:col-span-8 justify-center flex flex-wrap">
-            {currentItems.map((post, index) => (
-              <PostCard key={index} post={post.node} />
-            ))}
+        <div className=" mb-1  flex text-center justify-center transition duration-500 ease transform hover:-translate-y-1 flex-col px-10 items-center lg:items-center bg-blue-600  rounded-full text-white py-3 cursor-pointer">
+          <h1 className="font-large text-xl ">Uquicks Gospello Online Radio</h1>
+          <p className="font-small text-sm">
+            This is the sound you breath, listen to your best sda songs, hymns,
+            , sunday songs, praise and worship, sermons and accapella music
+            across the world
+          </p>
+        </div>
+        <div className=" flex text-center justify-center my-4">
+          <iframe
+            src="https://zeno.fm/player/uquicks-gospello-online-radio"
+            width="768"
+            height="300"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4 mx-3">
+          <div className="col-span-3 md:col-span-2">
+            <div className="gap-4 grid md:grid-cols-2 lg:grid-cols-3">
+              {currentItems.map((post, index) => (
+                <PostCard key={index} post={post.node} />
+              ))}
+            </div>
           </div>
-          <div className="lg:col-span-4 col-span-1">
-            <div className="lg:sticky relative top-8 mx-4">
+          <div className="mb-4 md:mb-0 md:col-span-1 col-span-3 ">
+            <div className="md:sticky relative top-8">
               <PostWidget />
               <Categories />
             </div>
           </div>
           <div
             onClick={scrollToTop}
-            className="flex list-none gap-4 text-2xl font-semibold md:sticky cursor-pointer text-blue-500 hover:text-pink-500 justify-center md:left-72"
+            className="ml-48 flex list-none gap-8 text-2xl font-semibold md:sticky cursor-pointer text-blue-500 hover:text-pink-500 justify-center md:left-72"
           >
             {PageDecrementBtn}
             {renderPageNumbers}

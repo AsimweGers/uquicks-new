@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 
 const About = () => {
@@ -19,7 +17,7 @@ const About = () => {
         <meta property="og:title" content="About Us | Uquicks" />
         <link
           rel="icon"
-          href="/https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60Dn7Tv-6ptaz5sHLHq95OIqXlYFR4p-8bA&usqp=CAU"
+          href="https://findicons.com/files/icons/138/toolbar/256/about.png"
         />
       </Head>
       <div className="transition duration-500 ease transform hover:-translate-y-1 px-2 mt-4 items-center flex flex-col">

@@ -64,7 +64,7 @@ const PostDetail = ({ post }) => {
   };
 
   return (
-    <div className="container">
+    <>
       <head>
         <title>{post.title}</title>
         <link rel="icon" href={`${post.featuredImage.url}`} />
@@ -76,25 +76,15 @@ const PostDetail = ({ post }) => {
           name="keywords"
           content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
         />
-        <meta name="robots" content="index,follow" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Uquicks" />
-        <meta name="twitter:creator" content="@bwambale_joshua" />
-        <meta property="og:image:width" content="800" />
-        <meta property="og:image:height" content="600" />
         <meta property="og:title" content={post.title} />
-        <meta
-          property="og:description"
-          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
-        />
-        <meta property="og:image" content={`${post.featuredImage.url}`} />
+        
       </head>
-      <div className="bg-white shadow-lg rounded-lg mt-6 p-3">
+      <div className="bg-white shadow-lg mt-6 p-3">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img
             src={post.featuredImage.url}
             alt={post.title}
-            className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg"
+            className="object-top h-full w-full object-cover  shadow-lg"
           />
         </div>
         <div className="">
@@ -134,19 +124,6 @@ const PostDetail = ({ post }) => {
                     src={`https://loader.to/api/button/?url=https://www.youtube.com/watch?v=${post.downloadable}&=mp3&color=008744#`}
                   ></iframe>
                 </div>
-
-                {/* 
-                <iframe
-                  className=" font-medium justify-center "
-                  src={`https://ytmp4.buzz/api/button/videos/${post.downloadable}`}
-                  width="100%"
-                  allowtransparency="true"
-                  scrolling="no"
-                  style={{
-                    border: "none",
-                    height: "auto",
-                  }}
-                ></iframe> */}
               </div>
               <div className="mt-4">
                 <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-red-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
@@ -171,7 +148,7 @@ const PostDetail = ({ post }) => {
         </div>
       </div>
 
-      <div className="mt-4 flex items-center flex-col bg-white shadow-2xl py-3 px-2 lg:px-28 justify-center rounded-lg">
+      <div className="mt-4 flex items-center flex-col bg-white shadow-2xl py-3 px-2 lg:px-28 justify-center ">
         <span className="transition duration-500 ease transform hover:-translate-y-1 inline-block bg-pink-500 text-lg font-medium rounded-full text-white px-8 py-3 my-6 cursor-pointer">
           Lyrics
         </span>
@@ -188,7 +165,7 @@ const PostDetail = ({ post }) => {
       {/* <div>
         <AdBanner />
       </div> */}
-    </div>
+    </>
   );
 };
 

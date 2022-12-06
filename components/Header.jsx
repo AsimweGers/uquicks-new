@@ -11,7 +11,7 @@ import Image from "next/image";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
-  // const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState("");
   const router = useRouter();
 
   const [categories, setCategories] = useState([]);
@@ -22,13 +22,13 @@ function Header() {
     });
   }, []);
 
-  // const handleSearch = (e) => {
-  //   e.preventDefault();
+  const handleSearch = (e) => {
+    e.preventDefault();
 
-  //   if (searchValue) {
-  //     router.push(`/search/${searchValue}`);
-  //   }
-  // };
+    if (searchValue) {
+      router.push(`/search/${searchValue}`);
+    }
+  };
 
   return (
     <div className="flex top-0 relative items-center w-full ">
@@ -71,13 +71,13 @@ function Header() {
                     </Link>
                   ))}
                 </div>
-                {/* <div
+                <div
                   className="block m-2 mr-4 text-3xl text-white cursor-pointer hover:bg-red-800 hover:text-whit hover:rounded-full hover:p-2"
                   onClick={() => setShowSidebar(!showSidebar)}
                 >
                   {showSidebar ? <ImCancelCircle /> : <AiOutlineSearch />}
-                </div> */}
-                {/* {showSidebar && (
+                </div>
+                {showSidebar && (
                   <div className=" ">
                     <div className="absolute left-0 z-10 items-center flex">
                       <form
@@ -99,7 +99,7 @@ function Header() {
                       </form>
                     </div>
                   </div>
-                )} */}
+                )}
               </div>
             </div>
             <div className="flex lg:hidden">

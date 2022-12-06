@@ -54,7 +54,6 @@ export default function MyApp({ Component, pageProps }) {
           }}
         />
         <ScrollToTopButton />
-
         <Layout>
           <Component {...pageProps} />
         </Layout>
