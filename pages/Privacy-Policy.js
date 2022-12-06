@@ -1,33 +1,65 @@
 import React from "react";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const Privacy = () => {
+  const SEO = {
+    title: "Privacy Policy | uquicks",
+    description:
+      "one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by uquicks and how we use it.",
+    additionalMetaTags: [
+      {
+        property: "keywords",
+        name: "keywords",
+        content:
+          "contact us, Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvvY96xqlVAZz3fesatF9vUAgCXHYzT5NeQ&usqp=CAU",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Montserrat:400,700",
+        type: "text/css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic",
+        type: "text/css",
+      },
+    ],
+    openGraph: {
+      type: "website",
+      url: "https://uquicks.com/Privacy-Policy",
+      title: "Privacy Policy | uquicks",
+      description:
+        "one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by uquicks and how we use it.",
+      images: [
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvvY96xqlVAZz3fesatF9vUAgCXHYzT5NeQ&usqp=CAU",
+          width: 800,
+          height: 600,
+          alt: "uquicks",
+          type: "image/png",
+        },
+
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvvY96xqlVAZz3fesatF9vUAgCXHYzT5NeQ&usqp=CAU",
+        },
+      ],
+    },
+    twitter: {
+      handle: "@Bwambalejoshua",
+      site: "@uquicks",
+      cardType: "summary_large_image",
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>Privacy Policy | uquicks</title>
-        <meta property="og:title" content="Privacy Policy | uquicks" />
-        <meta
-          name="og:description"
-          content="one of our main priorities is the privacy of our visitors. This
-          Privacy Policy document contains types of information that is
-          collected and recorded by uquicks and how we use it."
-        />
-        <link
-          rel="icon"
-          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVvvY96xqlVAZz3fesatF9vUAgCXHYzT5NeQ&usqp=CAU"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
+      <NextSeo {...SEO} />
       <div className="transition duration-500 ease transform hover:-translate-y-1 inline-block items-center lg:items-center px-6 py-3">
         <h1 className="text-4xl font-semibold my-3">
           Privacy Policy for uquicks

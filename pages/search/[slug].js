@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-
+import { NextSeo } from "next-seo";
 import { getCategories, getPosts } from "../../services";
 import { PostCard, Categories, Loader } from "../../components";
 import Head from "next/head";
@@ -13,24 +13,54 @@ const SearchPost = ({ posts }) => {
     return <Loader />;
   }
 
+  const SEO = {
+    title: "Search Uquicks | The Home of Gospel | Resources | Events",
+    description:
+      "All you need finds you here, Search for sda songs, nonstops, sunday, praise and worship, hymns and more",
+    additionalMetaTags: [
+      {
+        property: "keywords",
+        name: "keywords",
+        content:
+          "All you need finds you here, Search for sda songs, nonstops, sunday, praise and worship, hymns and more, Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "https://iconarchive.com/download/i60242/zerode/plump/Search.ico",
+      },
+    ],
+    openGraph: {
+      type: "website",
+      url: "https://uquicks.com/search",
+      title: "Search Uquicks | The Home of Gospel | Resources | Events",
+      description:
+        "All you need finds you here, Search for sda songs, nonstops, sunday, praise and worship, hymns and more",
+      images: [
+        {
+          url: "https://iconarchive.com/download/i60242/zerode/plump/Search.ico",
+          width: 800,
+          height: 600,
+          alt: "uquicks",
+          type: "image/ico",
+        },
+
+        {
+          url: "https://iconarchive.com/download/i60242/zerode/plump/Search.ico",
+        },
+      ],
+    },
+    twitter: {
+      handle: "@Bwambalejoshua",
+      site: "@uquicks",
+      cardType: "summary_large_image",
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>Search Uquicks | The Home of Gospel | Resources | Events</title>
-        <meta
-          name="description"
-          content="Uquicks is fully equipped gospel based website with the all kinds of
-            gospel music across the world."
-        />
-        <meta
-          property="og:title"
-          content="Search Uquicks | The Home of Gospel | Resources | Events"
-        />
-        <link
-          rel="icon"
-          href="https://iconarchive.com/download/i60242/zerode/plump/Search.ico"
-        />
-      </Head>
+      <NextSeo {...SEO} />
       <div className=" px-4 mb-8 flex justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 flex flex-wrap lg:col-span-8">

@@ -1,32 +1,66 @@
 import React from "react";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const Terms = () => {
+  const SEO = {
+    title: "Terms and Conditions | uquicks",
+    description:
+      "Welcome to uquicks company. These Terms of Service govern your use of our website located at uquicks.com together “Service” operated by uquicks.",
+    additionalMetaTags: [
+      {
+        property: "keywords",
+        name: "keywords",
+        content:
+          "contact us, Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5-mN3sr8GxBGLyoyNgZEcWQolhCYUm6QU3Y-17L9ZRMXIrXWgO-XBo3E0HmFQmdN0qE&usqp=CAU",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Montserrat:400,700",
+        type: "text/css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic",
+        type: "text/css",
+      },
+    ],
+    openGraph: {
+      type: "website",
+      url: "https://uquicks.com/Terms-&-Conditions",
+      title: "Terms and Conditions | uquicks",
+      description:
+        "Welcome to uquicks company. These Terms of Service govern your use of our website located at uquicks.com together “Service” operated by uquicks.",
+      images: [
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5-mN3sr8GxBGLyoyNgZEcWQolhCYUm6QU3Y-17L9ZRMXIrXWgO-XBo3E0HmFQmdN0qE&usqp=CAU",
+          width: 800,
+          height: 600,
+          alt: "uquicks",
+          type: "image/png",
+        },
+
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5-mN3sr8GxBGLyoyNgZEcWQolhCYUm6QU3Y-17L9ZRMXIrXWgO-XBo3E0HmFQmdN0qE&usqp=CAU",
+        },
+      ],
+    },
+    twitter: {
+      handle: "@Bwambalejoshua",
+      site: "@uquicks",
+      cardType: "summary_large_image",
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>Terms and Conditions | uquicks</title>
-        <meta property="og:title" content="Terms and Conditions | uquicks" />
-        <meta
-          name="og:description"
-          content="Welcome to uquicks company. These Terms of Service govern your use
-          of our website located at uquicks.com together “Service” operated by uquicks."
-        />
-        <link
-          rel="icon"
-          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5-mN3sr8GxBGLyoyNgZEcWQolhCYUm6QU3Y-17L9ZRMXIrXWgO-XBo3E0HmFQmdN0qE&usqp=CAU"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
+      <NextSeo {...SEO} />
+
       <div className="transition duration-500 ease transform hover:-translate-y-1 inline-block items-center lg:items-center px-6 py-3">
         <h2>
           <b className="text-4xl font-semibold">TERMS AND CONDITIONS</b>

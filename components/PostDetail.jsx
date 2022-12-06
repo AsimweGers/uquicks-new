@@ -1,9 +1,7 @@
 import React from "react";
-import Head from "next/head";
-import Image from "next/image";
-import { grpahCMSImageLoader } from "../util";
 import ReactPlayer from "react-player";
 // import AdBanner from "./AdBanner";
+import { NextSeo } from "next-seo";
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -63,22 +61,48 @@ const PostDetail = ({ post }) => {
     }
   };
 
+  const SEO = {
+    title: post.title,
+    description: `Watch, Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`,
+    additionalMetaTags: [
+      {
+        property: "keywords",
+        name: "keywords",
+        content: `Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`,
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: `${post.featuredImage.url}`,
+      },
+    ],
+    openGraph: {
+      type: "website",
+      url: `https://uquicks.com/post/${post.slug}`,
+      title: post.title,
+      description: `Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`,
+      images: [
+        {
+          url: `${post.featuredImage.url}`,
+          width: 800,
+          height: 600,
+          alt: "uquicks",
+        },
+
+        { url: `${post.featuredImage.url}` },
+      ],
+    },
+    twitter: {
+      handle: "@Bwambalejoshua",
+      site: "@uquicks",
+      cardType: "summary_large_image",
+    },
+  };
+
   return (
     <>
-      <head>
-        <title>{post.title}</title>
-        <link rel="icon" href={`${post.featuredImage.url}`} />
-        <meta
-          name="description"
-          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
-        />
-        <meta
-          name="keywords"
-          content={`Watch,  Download ${post.title} Song and Lyrics for free, More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here`}
-        />
-        <meta property="og:title" content={post.title} />
-        
-      </head>
+      <NextSeo {...SEO} />
       <div className="bg-white shadow-lg mt-6 p-3">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img

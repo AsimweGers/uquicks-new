@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const ContactUs = (props) => {
   function sendEmail(e) {
@@ -27,30 +27,64 @@ const ContactUs = (props) => {
     setMessage(true);
   };
 
+  const SEO = {
+    title: "Contact Us for any Help | Uquicks",
+    description:
+      "Contact Us | Uquicks, contact Us for any help, We are readily available 24 / 7",
+    additionalMetaTags: [
+      {
+        property: "keywords",
+        name: "keywords",
+        content:
+          "Uquicks, uquick, sda, kblc, kasese better living center, light fm kasese, awr light fm, Kasese News Updates, Kasese Technology, Loans in Kasese, Insurance in Kasese, Make Money Kasese, Kasese Entertainment, Free Data Kasese,how to see my ubteb results online, how to see my uneb results online,how to see my unmeb results online, Services at Free Costs in Kasese, Rwenzori tv live Rwenzori tv live streaming,",
+      },
+    ],
+    additionalLinkTags: [
+      {
+        rel: "icon",
+        href: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mD38LmQPJr85y9SCay6C_tWpOu_OwJR8NQ&usqp=CAU",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Montserrat:400,700",
+        type: "text/css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic",
+        type: "text/css",
+      },
+    ],
+    openGraph: {
+      type: "website",
+      url: "https://uquicks.com/ContactUs",
+      title: "Contact Us for any Help | Uquicks",
+      description:
+        "Contact Us | Uquicks, contact Us for any help, We are readily available 24 / 7",
+      images: [
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mD38LmQPJr85y9SCay6C_tWpOu_OwJR8NQ&usqp=CAU",
+          width: 800,
+          height: 600,
+          alt: "uquicks",
+          type: "image/png",
+        },
+
+        {
+          url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mD38LmQPJr85y9SCay6C_tWpOu_OwJR8NQ&usqp=CAU",
+        },
+      ],
+    },
+    twitter: {
+      handle: "@Bwambalejoshua",
+      site: "@uquicks",
+      cardType: "summary_large_image",
+    },
+  };
+
   return (
     <>
-      <Head>
-        <title>Contact Us for any Help | Uquicks</title>
-        <meta
-          name="description"
-          content="Contact Us | Uquicks, contact Us for any help, We are readily available 24 / 7"
-        />
-        <meta property="og:title" content="Contact Us for any Help | Uquicks" />
-        <link
-          rel="icon"
-          href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_mD38LmQPJr85y9SCay6C_tWpOu_OwJR8NQ&usqp=CAU"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic"
-          rel="stylesheet"
-          type="text/css"
-        />
-      </Head>
+      <NextSeo {...SEO} />
       <Container>
         <div className="text-center text-lg mb-1 justify-center transition duration-500 ease transform hover:-translate-y-1 inline-block items-center lg:items-center bg-gray-400 rounded-full text-white px-4 py-3 mx-10 ">
           <h1>Contact Uquicks</h1>

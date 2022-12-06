@@ -7,6 +7,7 @@ import { BiSearch } from "react-icons/bi";
 import { useRouter } from "next/router";
 import { getCategories } from "../services";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);

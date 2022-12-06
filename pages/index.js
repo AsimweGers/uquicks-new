@@ -79,29 +79,6 @@ export default function Home({ posts }) {
   };
 
   return (
-    <div>
-      <head>
-        <title>Uquicks | The Home of Gospel | Resources | Events</title>
-        <link rel="icon" href="/uquicks.png"/>
-        <meta
-          name="description"
-          content="Uquicks is fully equipped gospel based website with the all kinds of
-            gospel music across the world."
-        />
-        <meta
-          name="keywords"
-          content="Watch, Download Ntume Ani by Golden Gate Choir Song and Lyrics for free. More music like Gospel Music, sda music, sda hymns, Sunday music, sda mission story, Sda, granite bay church sda, sda church, sda sabbath school lesson, All find you here ,sda music, sda nonstops, hymn songs, sda hymns, sda mix"
-        />
-        <meta
-          property="og:title"
-          content="Uquicks | The Home of Gospel | Resources | Events"
-        />
-        <meta
-          property="og:description"
-          content="Uquicks is fully equipped gospel based website with the all kinds of
-            gospel music across the world."
-        />
-      </head>
       <div className="justify-center">
         <FeaturedPosts />
         <div className=" mb-1  flex text-center justify-center transition duration-500 ease transform hover:-translate-y-1 flex-col px-10 items-center lg:items-center bg-blue-600  rounded-full text-white py-3 cursor-pointer">
@@ -146,7 +123,6 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

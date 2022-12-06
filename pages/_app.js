@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../styles/globals.scss";
 import { Layout } from "../components";
 import ScrollToTopButton from "../components/ScrollToTop";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import * as gtag from "../lib/gtag";
+import { DefaultSeo } from "next-seo";
+import SEO from "../next-seo.config";
 
 export default function MyApp({ Component, pageProps }) {
-  
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -19,22 +20,9 @@ export default function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  
-  const [showChild, setShowChild] = useState(false);
-  useEffect(() => {
-    setShowChild(true);
-  }, []);
-
-  if (!showChild) {
-    return null;
-  }
-
-  if (typeof window === "undefined") {
-    return <></>;
-  } else {
-    
     return (
       <>
+        <DefaultSeo {...SEO} />
         <Script
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
@@ -60,6 +48,3 @@ export default function MyApp({ Component, pageProps }) {
       </>
     );
   }
-}
-
-
