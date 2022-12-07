@@ -1,5 +1,5 @@
 export default {
-  title: "Uquicks | The Home of Gospel | Resources | Events",
+  title: "Uquicks | The Home of Gospel Music | Resources | Events",
   description:
     "Uquicks is fully equipped gospel based website with the all kinds of gospel music across the world.",
   additionalMetaTags: [
