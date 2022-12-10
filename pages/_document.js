@@ -11,10 +11,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
 
-<!-- Ezoic Code -->
+{/* <!-- Ezoic Code --> */}
 	<script>var ezoicId = 413266;</script>
 	<script type="text/javascript" src="//go.ezoic.net/ezoic/ezoic.js"></script>
-<!-- Ezoic Code -->
+{/* <!-- Ezoic Code --> */}
 
           <script
             async
