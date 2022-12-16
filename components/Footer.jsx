@@ -174,7 +174,7 @@ const Footer = () => {
               <p className="cta-button">Created By Bwambale Joshua (JCP)</p>
             </Link>
             <p className="text-sm text-grayish-blue mt-8 font-semibold cursor-pointer">
-              © Sdamusic 2022. All Rights Reserved
+              ©uquicks 2022. All Rights Reserved
             </p>
           </section>
         </div>
